@@ -9,11 +9,12 @@ This repository contains the replication framework for the AddressSanitizer pape
 - **Member C :** weiyuchen 1240023961
 - **Member D :** yuankexin 1240024103
 ##  Repository Structure
-- `test_asan.c`: Basic verification code demonstrating heap buffer overflow interception.
-- `download_benchmarks.sh`: Automated script to fetch and extract the PolyBench/C dataset.
 - `Makefile`: Automated build engine for compiling baseline and ASan-instrumented binaries.
 - `.gitignore`: Rules to prevent binary and dataset pollution in the repository.
 - `Dockerfile`: Configuration for isolated containerized execution.
+- `docs/`: Project documentation, paper analysis, extracted claims, and environment logs.
+- `scripts/`: Automation scripts for downloading benchmarks and running experiments.
+- `tests/`: C source files containing intentional memory vulnerabilities for ASan testing.
 
 ## Local Environment Execution (WSL / Ubuntu)
 To ensure strict reproducibility, this project is built and tested on:
