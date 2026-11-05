@@ -21,3 +21,4 @@ COPY . /app/
 
 # Default command to keep the container running for interactive testing
 CMD ["/bin/bash"]
+
