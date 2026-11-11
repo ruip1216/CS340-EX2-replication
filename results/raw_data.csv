@@ -1,0 +1,3 @@
+Benchmark,Version,Run1_Time(s),Run1_RSS(KB),Run2_Time(s),Run2_RSS(KB),Run3_Time(s),Run3_RSS(KB),AvgTime(s),AvgRSS(KB)
+gemm,Normal,0.29,29516,0.32,29516,0.29,29452,.3000,29494
+gemm,ASan,0.56,37604,0.57,37496,0.57,37684,.5666,37594
