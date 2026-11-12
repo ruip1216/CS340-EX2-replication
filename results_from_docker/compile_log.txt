@@ -1,0 +1,8 @@
+make: Entering directory '/app'
+clang -O2 -I./polybench/utilities -I./polybench/linear-algebra/blas/gemm ./polybench/utilities/polybench.c ./polybench/linear-algebra/blas/gemm/gemm.c -o gemm_normal -lm
+clang -O2 -I./polybench/utilities -fsanitize=address -g -I./polybench/linear-algebra/blas/gemm ./polybench/utilities/polybench.c ./polybench/linear-algebra/blas/gemm/gemm.c -o gemm_asan -lm
+clang -O2 -I./polybench/utilities -I./polybench/linear-algebra/solvers/cholesky ./polybench/utilities/polybench.c ./polybench/linear-algebra/solvers/cholesky/cholesky.c -o cholesky_normal -lm
+clang -O2 -I./polybench/utilities -fsanitize=address -g -I./polybench/linear-algebra/solvers/cholesky ./polybench/utilities/polybench.c ./polybench/linear-algebra/solvers/cholesky/cholesky.c -o cholesky_asan -lm
+clang -O2 -I./polybench/utilities -I./polybench/linear-algebra/kernels/mvt ./polybench/utilities/polybench.c ./polybench/linear-algebra/kernels/mvt/mvt.c -o mvt_normal -lm
+clang -O2 -I./polybench/utilities -fsanitize=address -g -I./polybench/linear-algebra/kernels/mvt ./polybench/utilities/polybench.c ./polybench/linear-algebra/kernels/mvt/mvt.c -o mvt_asan -lm
+make: Leaving directory '/app'

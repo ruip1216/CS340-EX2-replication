@@ -1,5 +1,5 @@
 # Use Ubuntu as the base image
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
 # Prevent interactive timezone prompts during installation
 ENV DEBIAN_FRONTEND=noninteractive
