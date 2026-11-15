@@ -1,0 +1,44 @@
+=================================================================
+==2328==ERROR: AddressSanitizer: global-buffer-overflow on address 0x5d6ec8a73b50 at pc 0x5d6ec80e2b0f bp 0x7fff39dfd0a0 sp 0x7fff39dfd098
+READ of size 4 at 0x5d6ec8a73b50 thread T0
+==2328==WARNING: invalid path to external symbolizer!
+==2328==WARNING: Failed to use and restart external symbolizer!
+    #0 0x5d6ec80e2b0e  (/home/adminpr/cs340_project/test_global_bin+0x115b0e) (BuildId: e19915d6ac7819a207a0742d9191fb226ece8b0f)
+    #1 0x7f0bcd42a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #2 0x7f0bcd42a717  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #3 0x5d6ec7ff9364  (/home/adminpr/cs340_project/test_global_bin+0x2c364) (BuildId: e19915d6ac7819a207a0742d9191fb226ece8b0f)
+
+0x5d6ec8a73b50 is located 8 bytes after global variable 'global_array' defined in 'tests/test_global.c' (0x5d6ec8a73b20) of size 40
+SUMMARY: AddressSanitizer: global-buffer-overflow (/home/adminpr/cs340_project/test_global_bin+0x115b0e) (BuildId: e19915d6ac7819a207a0742d9191fb226ece8b0f) 
+Shadow bytes around the buggy address:
+  0x5d6ec8a73880: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73900: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73a00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x5d6ec8a73b00: 00 00 00 00 00 00 00 00 00 f9[f9]f9 f9 f9 f9 f9
+  0x5d6ec8a73b80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73c00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73c80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73d00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5d6ec8a73d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2328==ABORTING
