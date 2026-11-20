@@ -14,20 +14,19 @@ This repository contains the replication framework for the AddressSanitizer (ASa
 - `Makefile`: Automated build engine for compiling baseline and ASan-instrumented binaries.
 - `Dockerfile`: Configuration for isolated, reproducible containerized execution.
 - `.gitignore`: Rules to prevent compiled binaries and temporary datasets from polluting the repository.
-- `docs/`: Complete project documentation, including paper analysis, extracted claims, experimental design, and final analysis reports.
+- `docs/`: Complete project documentation, including paper analysis, extracted claims, experimental design, environment setup, and deviations.
 - `scripts/`: Automation scripts (`download_benchmarks.sh`, `run_experiments.sh`) for fetching PolyBench/C and running performance benchmarks.
 - `tests/`: C source files (`test_asan.c`, `test_stack.c`, `test_global.c`, `test_uaf.c`) containing intentional memory vulnerabilities for Claim 1 verification.
-- `results/`: Collected experimental outputs, including ASan detection logs (`.log`), `detection_results.md`, benchmark data (`raw_data.csv`), statistical summaries, and Python analysis/plotting scripts (`analysis.py`, `figures/plot_results.py`).
-- `results_from_docker/`: Standardized and extended benchmark datasets (`raw_data.csv`, `raw_data_extended.csv`) and compile logs generated inside the Docker container for cross-environment verification.
+- `results/`: Collected experimental outputs, including ASan detection logs (`.log`), `detection_results.md`, benchmark data (`raw_data.csv`), statistical summaries, and Python analysis/plotting scripts.
+- `results_from_docker/`: Standardized and extended benchmark datasets (`raw_data.csv`, `raw_data_extended.csv`) and compile logs generated inside Docker for cross-environment verification.
 
 ## Environment Requirements
 
-To ensure strict reproducibility, this project is built and tested on:
 - **OS:** Ubuntu (WSL2 recommended for Windows users)
 - **Compiler:** Clang 21.1.8 (with native `-fsanitize=address` support)
 - **Build System:** GNU Make 4.4.1
 - **Benchmark Suite:** PolyBench/C
-- **Analysis:** Python 3 (with `pandas`, `numpy`, `matplotlib`)
+- **Analysis:** Python 3 (`pandas`, `numpy`, `matplotlib`)
 
 ### Install Core Dependencies (Ubuntu / WSL2)
 
