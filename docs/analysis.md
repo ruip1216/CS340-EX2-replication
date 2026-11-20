@@ -4,7 +4,7 @@
 
 The experimental results show that ASan introduced different levels of performance overhead across the three benchmarks.
 
-Cholesky showed the highest execution time overhead (212.81%), while MVT had the lowest (55.33%). This difference may be related to the characteristics and computational operations of each benchmark. Different workloads may interact with ASan's memory instrumentation in different ways.
+Cholesky showed the highest execution time overhead (212.81%), while MVT had the lowest (55.56%). GEMM showed a runtime overhead of 96.63%, which was between the values observed for Cholesky and MVT. This difference may be related to the characteristics and computational operations of each benchmark. Different workloads may interact with ASan's memory instrumentation in different ways.
 
 For memory usage, the overhead ranged from 18.18% to 25.74%. GEMM showed the highest memory overhead, while Cholesky showed the lowest.
 

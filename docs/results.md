@@ -32,9 +32,9 @@ The overhead was calculated by comparing the ASan version with the Normal versio
 
 | Benchmark | Time Overhead | Memory Overhead |
 |---|---:|---:|
-| GEMM | 96.66% | 25.74% |
+| GEMM | 96.63% | 25.74% |
 | Cholesky | 212.81% | 18.18% |
-| MVT | 55.33% | 24.07% |
+| MVT | 55.56% | 24.07% |
 
 ![Execution Time Overhead](../results/figures/execution_time_overhead.png)
 
@@ -44,7 +44,7 @@ The overhead was calculated by comparing the ASan version with the Normal versio
 
 The results show that ASan increased both execution time and memory usage across all three benchmarks.
 
-Cholesky showed the largest time overhead, at 212.81%. GEMM had a time overhead of 96.66%, while MVT showed the smallest increase at 55.33%.
+Cholesky showed the largest time overhead, at 212.81%. GEMM had a time overhead of 96.63%, while MVT showed the smallest increase at 55.56%.
 
 For memory usage, GEMM had the largest overhead at 25.74%, followed by MVT at 24.07% and Cholesky at 18.18%.
 

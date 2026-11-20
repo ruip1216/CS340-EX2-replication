@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 benchmarks = ["GEMM", "Cholesky", "MVT"]
 
 # Experimental overhead (%)
-time_overhead = [96.66, 212.81, 55.33]
+time_overhead = [96.63, 212.81, 55.56]
 memory_overhead = [25.74, 18.18, 24.07]
 
 # Figure 1: Execution Time Overhead

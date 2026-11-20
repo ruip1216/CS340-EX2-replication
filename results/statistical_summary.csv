@@ -1,0 +1,7 @@
+Benchmark,Version,Runtime_Mean_s,Runtime_SD_s,Memory_Mean_KB,Memory_SD_KB
+gemm,Normal,0.2967,0.0058,29670.67,10.07
+gemm,ASan,0.5833,0.0252,37308.0,117.23
+cholesky,Normal,17.3767,0.9874,63898.67,11.55
+cholesky,ASan,54.3567,3.6371,75513.33,149.74
+mvt,Normal,0.03,0.0,32730.67,66.97
+mvt,ASan,0.0467,0.0058,40609.33,49.69

@@ -19,8 +19,7 @@ For each benchmark, we prepared two versions:
 - Normal version: compiled without AddressSanitizer.
 - ASan version: compiled with AddressSanitizer enabled.
 
-Each version was executed three times. Execution time and maximum resident set size (RSS) were recorded for each run. The average values were then calculated.
-
+Each version was executed three times. Execution time and maximum resident set size (RSS) were recorded for each run. The mean and standard deviation were calculated from the three runs.
 All experiments were conducted in the same Docker environment using Ubuntu Clang 18.1.3.
 
 ## 3. Extension Results
@@ -29,9 +28,9 @@ The extended experiment produced the following results:
 
 | Benchmark | Time Overhead | Memory Overhead |
 |---|---:|---:|
-| GEMM | 96.66% | 25.74% |
+| GEMM | 96.63% | 25.74% |
 | Cholesky | 212.81% | 18.18% |
-| MVT | 55.33% | 24.07% |
+| MVT | 55.56% | 24.07% |
 
 Among the three benchmarks, Cholesky showed the highest execution time overhead, while MVT showed the lowest. GEMM had the highest memory overhead.
 

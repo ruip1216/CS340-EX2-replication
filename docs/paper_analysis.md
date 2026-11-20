@@ -76,7 +76,7 @@ The paper also discusses limitations and trade-offs. Therefore, the project shou
 
 ## 9. Relevance to our project
 
-The group's current repository contains a `test_asan.c` heap-overflow example, a PolyBench/C download script, a Makefile with normal and ASan GEMM build targets, and a Dockerfile.
+The group's current repository contains a `test_asan.c` heap-overflow example, a PolyBench/C download script, a Makefile with normal and ASan build targets for GEMM, Cholesky, and MVT,and a Dockerfile.
 
 These files provide a starting point for:
 
