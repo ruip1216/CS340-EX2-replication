@@ -1,0 +1,6 @@
+source,machine attribution,coverage,repetitions,treatment
+raw_data.csv,i9 (earlier mapping),GEMM Normal/ASan,3 per condition,Keep as separate first batch
+raw_data (1).csv,i7 (earlier mapping),GEMM Normal/ASan,3 per condition,Keep as separate second batch
+raw_data_extended.csv,i9 (environment_info.txt + C log),"GEMM, Cholesky, MVT Normal/ASan",3 per condition,Main i9 extended dataset
+benchmark_run(1).log,i9 (CPU model printed),"GEMM, Cholesky, MVT Normal/ASan",3 per condition,"Reconstructed summary, not contemporaneous terminal log"
+benchmark_run(2).log,B / i7 per user identification,GEMM Normal/ASan,1 per condition,V2 single-run; do not merge with second-batch CSV

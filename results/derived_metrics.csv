@@ -1,0 +1,6 @@
+batch,machine_mapping,source_csv,benchmark,normal_runtime_mean_s,normal_runtime_sample_sd_s,asan_runtime_mean_s,asan_runtime_sample_sd_s,runtime_overhead_pct,normal_recorded_rss_mean_kb,normal_recorded_rss_sample_sd_kb,asan_recorded_rss_mean_kb,asan_recorded_rss_sample_sd_kb,recorded_rss_ratio,recorded_rss_overhead_pct
+first batch,i9 (per earlier group mapping),raw_data.csv,gemm,0.300000,0.017321,0.566667,0.005774,88.89,29494.67,36.95,37594.67,94.35,1.275,27.46
+second batch,i7 (per earlier group mapping),raw_data (1).csv,gemm,0.410000,0.020000,0.870000,0.060828,112.20,29400.00,93.55,37181.33,18.90,1.265,26.47
+extended batch,i9 (environment metadata),raw_data_extended.csv,cholesky,17.376667,0.987438,54.356667,3.637119,212.81,63898.67,11.55,75513.33,149.74,1.182,18.18
+extended batch,i9 (environment metadata),raw_data_extended.csv,gemm,0.296667,0.005774,0.583333,0.025166,96.63,29670.67,10.07,37308.00,117.23,1.257,25.74
+extended batch,i9 (environment metadata),raw_data_extended.csv,mvt,0.030000,0.000000,0.046667,0.005774,55.56,32730.67,66.97,40609.33,49.69,1.241,24.07

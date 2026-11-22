@@ -1,0 +1,3 @@
+source_log,member,machine_attribution,benchmark,version,runtime_s,recorded_rss_kb,repetitions,note
+benchmark_run(2).log,B,i7 (user-identified),GEMM,Normal,0.2866,29493,1,V2 single-run; separate from three-run CSV
+benchmark_run(2).log,B,i7 (user-identified),GEMM,ASan,0.5666,37526,1,V2 single-run; separate from three-run CSV
