@@ -1,24 +1,21 @@
-# Use Ubuntu as the base image
 FROM ubuntu:24.04
 
-# Prevent interactive timezone prompts during installation
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install essential build tools and compilers
 RUN apt-get update && apt-get install -y \
     build-essential \
-    clang \
+    clang-18 \
     wget \
     unzip \
     time \
+    bc \
+    && ln -sf /usr/bin/clang-18 /usr/bin/clang \
     && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory
 WORKDIR /app
 
-# Copy current directory contents into the container
 COPY . /app/
 
-# Default command to keep the container running for interactive testing
-CMD ["/bin/bash"]
+RUN chmod +x *.sh scripts/*.sh 2>/dev/null || true
 
+CMD ["/bin/bash"]
